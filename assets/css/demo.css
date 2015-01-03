@@ -1,0 +1,17 @@
+.promo {
+  padding: 1.618em 0.618em;
+  border-radius: 0.25em;
+  border: 0.25em solid #808080;
+  transition: all 0.3s ease-in-out;
+}
+.promo[class*="column"] {
+  width: 12em;
+}
+.promo__figure {
+  padding: 1.618em 0.618em;
+  margin: 0.618em;
+  background: rgba(90,90,90,0.1);
+}
+.promo__figure__img {
+  width: 90%;
+}

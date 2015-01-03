@@ -1,0 +1,36 @@
+[class*="--horizontal"]
+  flex-direction: row;
+
+[class*="--vertical"] 
+  flex-direction: column;
+  
+
+
+.promo
+  display:flex;
+
+[class*="justify--"]    
+    &[class*="space-between"]
+        justify-content: space-between;
+    &[class*="space-around"]
+        justify-content: space-around;
+    &[class*="center"]
+        justify-content: center;
+    &[class*="flex-start"]
+        justify-content: flex-start;
+    &[class*="flex-end"]
+        justify-content: flex-end;
+
+[class*="direction--"]    
+    &[class*="row"]
+        flex-direction: row;
+    &[class*="column"]
+        flex-direction: column;
+    &[class*="row-reverse"]
+        flex-direction: row-reverse;
+    &[class*="column-reverse"]
+        flex-direction: column-reverse;
+for num in 1..10
+    .grow--{num}
+        .promo__figure
+            flex-grow: num
