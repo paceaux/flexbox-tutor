@@ -1,3 +1,10 @@
+html, body
+  font-size: 1em;
+  font-family: Arial
+  line-height: 1.618
+  padding: 0
+  margin: 0
+
 .promo
   padding: 1.618em .618em;
   border-radius: .25em;
@@ -14,5 +21,61 @@
   background: rgba(90,90,90,.1);
   &__img
     width: 90%
+  &:nth-child(even)
+    .promo__figure__img
+      transform: rotatey(180deg)
+  &:nth-child(3n)
+      .promo__figure__img
+        transform: rotatex(180deg)
+  &:nth-child(5n)
+      .promo__figure__img
+        transform: rotatez(180deg)
+  
+.editable:hover, .editable:focus{
+    outline: 1px dashed #bbb;
+    
+}
+[contenteditable="true"]{
+    outline: 1px dashed #777;
+}
+[contenteditable="true"]:focus, [contenteditable="true"]:hover{
+    outline: 1px solid #9b9;
+}
+[contenteditable="true"] > style[scoped],
+style[scoped]:hover{
+    display:block;
+}
 
+.tutor
+  width: 18em;
+  &__field
+    font-family: monospace
+    font-size: .9em
+    line-height: 1.618
+    &__field
+      border: 1px solid transparent
+      &:hover
+        border-color: #999
+      
+    &--hidden
+      display:none;
+    &--contextMenu
+      border:2px solid #999
+      background: white;
+      border-radius: 2px;
+      width: 14em;
+      z-index: 9999
+    &__select, &__input
+      font-family: inherit
+      font-size:inherit
+      border: none
+      background: transparent
+    &__select
+      display:inline-block
+    &__label
+      clear:left
+      text-transform: lowercase
+      &::after
+        content: ':'
+        
   

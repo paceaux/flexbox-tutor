@@ -1,3 +1,11 @@
+html,
+body {
+  font-size: 1em;
+  font-family: Arial;
+  line-height: 1.618;
+  padding: 0;
+  margin: 0;
+}
 .promo {
   padding: 1.618em 0.618em;
   border-radius: 0.25em;
@@ -14,4 +22,69 @@
 }
 .promo__figure__img {
   width: 90%;
+}
+.promo__figure:nth-child(even) .promo__figure__img {
+  transform: rotatey(180deg);
+}
+.promo__figure:nth-child(3n) .promo__figure__img {
+  transform: rotatex(180deg);
+}
+.promo__figure:nth-child(5n) .promo__figure__img {
+  transform: rotatez(180deg);
+}
+.editable:hover,
+.editable:focus {
+  outline: 1px dashed #bbb;
+}
+[contenteditable="true"] {
+  outline: 1px dashed #777;
+}
+[contenteditable="true"]:focus,
+[contenteditable="true"]:hover {
+  outline: 1px solid #9b9;
+}
+[contenteditable="true"] > style[scoped],
+style[scoped]:hover {
+  display: block;
+}
+.tutor {
+  width: 18em;
+}
+.tutor__field {
+  font-family: monospace;
+  font-size: 0.9em;
+  line-height: 1.618;
+}
+.tutor__field__field {
+  border: 1px solid transparent;
+}
+.tutor__field__field:hover {
+  border-color: #999;
+}
+.tutor__field--hidden {
+  display: none;
+}
+.tutor__field--contextMenu {
+  border: 2px solid #999;
+  background: #fff;
+  border-radius: 2px;
+  width: 14em;
+  z-index: 9999;
+}
+.tutor__field__select,
+.tutor__field__input {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  background: transparent;
+}
+.tutor__field__select {
+  display: inline-block;
+}
+.tutor__field__label {
+  clear: left;
+  text-transform: lowercase;
+}
+.tutor__field__label::after {
+  content: ':';
 }

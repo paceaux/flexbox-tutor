@@ -3,34 +3,32 @@
 
 [class*="--vertical"] 
   flex-direction: column;
-  
-
 
 .promo
   display:flex;
 
-[class*="justify--"]    
-    &[class*="space-between"]
-        justify-content: space-between;
-    &[class*="space-around"]
-        justify-content: space-around;
-    &[class*="center"]
-        justify-content: center;
-    &[class*="flex-start"]
-        justify-content: flex-start;
-    &[class*="flex-end"]
-        justify-content: flex-end;
+.justify--
+    for prop in space-between space-around center flex-start flex-end    
+        &{prop}
+            justify-content: prop;
 
-[class*="direction--"]    
-    &[class*="row"]
-        flex-direction: row;
-    &[class*="column"]
-        flex-direction: column;
-    &[class*="row-reverse"]
-        flex-direction: row-reverse;
-    &[class*="column-reverse"]
-        flex-direction: column-reverse;
+.items--
+    for prop in baseline center flex-start flex-end stretch
+        &{prop}
+            align-items: prop
+.direction--
+    for prop in row column row-reverse column-reverse
+        &{prop}
+            flex-direction: prop
+
+.wrap--
+    for prop in nowrap wrap wrap-reverse
+        &{prop}
+            flex-wrap: prop
+
 for num in 1..10
     .grow--{num}
-        .promo__figure
-            flex-grow: num
+        flex-grow: num
+    .shrink--{num}
+        flex-shrink: num
+

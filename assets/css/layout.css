@@ -7,60 +7,114 @@
 .promo {
   display: flex;
 }
-[class*="justify--"][class*="space-between"] {
+.justify--space-between {
   justify-content: space-between;
 }
-[class*="justify--"][class*="space-around"] {
+.justify--space-around {
   justify-content: space-around;
 }
-[class*="justify--"][class*="center"] {
+.justify--center {
   justify-content: center;
 }
-[class*="justify--"][class*="flex-start"] {
+.justify--flex-start {
   justify-content: flex-start;
 }
-[class*="justify--"][class*="flex-end"] {
+.justify--flex-end {
   justify-content: flex-end;
 }
-[class*="direction--"][class*="row"] {
+.items--baseline {
+  align-items: baseline;
+}
+.items--center {
+  align-items: center;
+}
+.items--flex-start {
+  align-items: flex-start;
+}
+.items--flex-end {
+  align-items: flex-end;
+}
+.items--stretch {
+  align-items: stretch;
+}
+.direction--row {
   flex-direction: row;
 }
-[class*="direction--"][class*="column"] {
+.direction--column {
   flex-direction: column;
 }
-[class*="direction--"][class*="row-reverse"] {
+.direction--row-reverse {
   flex-direction: row-reverse;
 }
-[class*="direction--"][class*="column-reverse"] {
+.direction--column-reverse {
   flex-direction: column-reverse;
 }
-.grow--1 .promo__figure {
+.wrap--nowrap {
+  flex-wrap: nowrap;
+}
+.wrap--wrap {
+  flex-wrap: wrap;
+}
+.wrap--wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+.grow--1 {
   flex-grow: 1;
 }
-.grow--2 .promo__figure {
+.shrink--1 {
+  flex-shrink: 1;
+}
+.grow--2 {
   flex-grow: 2;
 }
-.grow--3 .promo__figure {
+.shrink--2 {
+  flex-shrink: 2;
+}
+.grow--3 {
   flex-grow: 3;
 }
-.grow--4 .promo__figure {
+.shrink--3 {
+  flex-shrink: 3;
+}
+.grow--4 {
   flex-grow: 4;
 }
-.grow--5 .promo__figure {
+.shrink--4 {
+  flex-shrink: 4;
+}
+.grow--5 {
   flex-grow: 5;
 }
-.grow--6 .promo__figure {
+.shrink--5 {
+  flex-shrink: 5;
+}
+.grow--6 {
   flex-grow: 6;
 }
-.grow--7 .promo__figure {
+.shrink--6 {
+  flex-shrink: 6;
+}
+.grow--7 {
   flex-grow: 7;
 }
-.grow--8 .promo__figure {
+.shrink--7 {
+  flex-shrink: 7;
+}
+.grow--8 {
   flex-grow: 8;
 }
-.grow--9 .promo__figure {
+.shrink--8 {
+  flex-shrink: 8;
+}
+.grow--9 {
   flex-grow: 9;
 }
-.grow--10 .promo__figure {
+.shrink--9 {
+  flex-shrink: 9;
+}
+.grow--10 {
   flex-grow: 10;
+}
+.shrink--10 {
+  flex-shrink: 10;
 }
