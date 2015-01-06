@@ -9,24 +9,54 @@
 </head>
 <body>
 <div class="tutor">
-    <label for="justify">Justify-content</label>
-    <select id="justify" class="js-propertySwitcher tutor__select" data-classPrefix="justify--" data-updateToClass="promo">
-        <option>space-between</option>
-        <option>space-around</option>
-        <option>center</option>
-        <option>flex-start</option>
-        <option>flex-end</option>
-    </select>
-    <label for="direction">Flex Direction</label>
-    <select id="direction" class="js-propertySwitcher tutor__select" data-classPrefix="direction--" data-updateToClass="promo">
+    <fieldset class="tutor__field">
+        <label for="justify" class="tutor__field__label">Justify-content</label>
+        <select id="justify" class="js-propertySwitcher tutor__field__select tutor__select" data-classPrefix="justify--" data-updateToClass="promo">
+            <option>space-between</option>
+            <option>space-around</option>
+            <option>center</option>
+            <option>flex-start</option>
+            <option>flex-end</option>
+        </select>
+    </fieldset>
+    <fieldset class="tutor__field">
+        <label for="align" class="tutor__field__label">Align-items</label>
+        <select id="align" class="js-propertySwitcher tutor__field__select tutor__select" data-classPrefix="items--" data-updateToClass="promo">
+            <option>baseline</option>
+            <option>center</option>
+            <option>flex-start</option>
+            <option>flex-end</option>
+            <option>stretch</option>
+        </select>
+    </fieldset>
+    <fieldset class="tutor__field">
+    <label for="direction" class="tutor__field__label">Flex Direction</label>
+    <select id="direction" class="js-propertySwitcher tutor__field__select tutor__select" data-classPrefix="direction--" data-updateToClass="promo">
         <option>row</option>
         <option>column</option>
         <option>row-reverse</option>
         <option>column-reverse</option>
     </select>
-    <label for="grow">Flex Grow</label>
-    <input id="grow" class="js-propertySwitcher" type="number" min="0" max="10" step="1" data-classPrefix="grow--" data-updateToClass="promo"/>
-    <button id="js-cloneItem" data-cloneOfSelector=".promo__figure:last-child">Clone Item</button>
+    </fieldset>
+    <fieldset class="tutor__field">
+    <label for="wrap" class="tutor__field__label">Flex Wrap</label>
+    <select id="wrap" class="js-propertySwitcher tutor__field__select tutor__select" data-classPrefix="wrap--" data-updateToClass="promo">
+        <option>nowrap</option>
+        <option>wrap</option>
+        <option>wrap-reverse</option>
+    </select>
+    </fieldset>
+    <fieldset id="contextmenu" class="tutor__field tutor__field--hidden tutor__field--contextMenu">
+        <fieldset class="tutor__field__field">
+            <label for="grow" class="tutor__field__label">Flex-Grow</label>
+            <input name="grow" class="js-propertySwitcher tutor__field__input" type="number" min="0" max="10" step="1" data-classPrefix="grow--" data-updateToClass="hasMenu"/>
+        </fieldset>
+        <fieldset class="tutor__field__field">
+        <label for="grow" class="tutor__field__label">Flex-Shrink</label>
+        <input id="shrink" class="js-propertySwitcher tutor__field__input" type="number" min="0" max="10" step="1" data-classPrefix="shrink--" data-updateToClass="hasMenu"/>
+        </fieldset>
+    </fieldset>
+    <button id="js-cloneItem" class="tutor__field__button" data-cloneOfSelector=".promo__figure:last-child">Clone Item</button>
 </div>
 <section class="promo promo--horizontal">
   <figure class="promo__figure">
