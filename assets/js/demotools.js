@@ -54,6 +54,7 @@ demoTools = {
                 clone =    targetEl.cloneNode(true);
             targetEl.parentNode.appendChild(clone);
             _this.activatePlugins();
+            _this.bindUiEvents();
 
         },
         figureContextMenu: function (e) {
@@ -69,6 +70,7 @@ demoTools = {
             menu.style.top = coords.y + 'px';
         },
         figureContextMenuMouseout: function (e) {
+            console.log('out');
             var menu = document.getElementById('contextmenu');
             menu.style.display = 'none';
         }
